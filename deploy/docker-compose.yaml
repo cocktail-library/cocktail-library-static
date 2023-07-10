@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  server:
+    container_name: cocktails-static-${CONTAINER_NS}
+    image: registry.fritsler.ru/cocktail-library-static:${BUILD_VER}
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${COCKTAILS_STATIC__SERVER_PORT}:4030"
