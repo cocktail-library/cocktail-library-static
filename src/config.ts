@@ -1,7 +1,7 @@
 const app = {
   name: 'cocktail-library-static',
   port: process.env.APP__PORT || 4030,
-  storagePath: process.env.COCKTAILS_STATIC__STORAGE_PATH || '../cocktails-library-static-storage'
+  storagePath: process.env.COCKTAILS_STATIC__STORAGE_PATH || '../cocktail-library-static-storage'
 }
 
 const fileStorage = {
@@ -19,7 +19,7 @@ export interface DbConfig {
 
 const db: DbConfig = {
   dialect: 'sqlite',
-  storage: process.env.COCKTAILS_STATIC__SQLITE_PATH || '../cocktails-static-db.sqlite'
+  storage: process.env.COCKTAILS_STATIC__SQLITE_PATH || '../cocktail-static-db.sqlite'
 }
 
 export {
