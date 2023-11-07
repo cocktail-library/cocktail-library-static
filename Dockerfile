@@ -10,7 +10,6 @@ FROM node:slim
 
 WORKDIR /app
 ENV NODE_ENV production
-USER node
 COPY package.json yarn.lock ./
 
 RUN yarn install --production
