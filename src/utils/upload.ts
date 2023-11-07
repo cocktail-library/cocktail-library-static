@@ -1,6 +1,5 @@
-import { Request } from "express";
-import { ApiError } from "./api-error";
-import { UploadedFile } from "express-fileupload";
+import { Request } from 'express'
+import { ApiError } from './api-error'
 
 function getFilesFromRequest(req: Request) {
   if (!req.files || Object.keys(req.files).length === 0) {

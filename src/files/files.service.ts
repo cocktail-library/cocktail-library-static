@@ -1,8 +1,7 @@
 import { FilesRepository } from './files.repository'
-import { IFile } from './files.entity'
 import { inject, injectable } from 'inversify'
 import { TYPES } from '../ioc-types'
-import { UploadedFile } from "express-fileupload";
+import { UploadedFile } from 'express-fileupload'
 
 @injectable()
 class FilesService {

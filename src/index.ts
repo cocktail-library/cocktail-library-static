@@ -5,7 +5,7 @@ import { app as appConfig, fileStorage as fileStorageConfig } from './config'
 import bodyParser from 'body-parser'
 
 import { fileRouter } from './files/files.routes'
-import fileUpload from "express-fileupload";
+import fileUpload from 'express-fileupload'
 
 const app = express()
 

@@ -2,11 +2,11 @@ import { sequelize } from '../db-connection'
 import { GenericRepository } from '../generic/generic.repository'
 import { File, FileStatus, IFile } from './files.entity'
 import { injectable } from 'inversify'
-import { UploadedFile } from "express-fileupload";
-import { getExtensionFromFilename } from "../utils/upload";
-import { app as appConfig } from "../config";
-import path from "path";
-import { logger } from "../utils/logger";
+import { UploadedFile } from 'express-fileupload'
+import { getExtensionFromFilename } from '../utils/upload'
+import { app as appConfig } from '../config'
+import path from 'path'
+import { logger } from '../utils/logger'
 
 @injectable()
 class FilesRepository {

@@ -3,7 +3,7 @@ import { Request, Response } from 'express'
 import { inject, injectable } from 'inversify'
 import 'reflect-metadata'
 import { TYPES } from '../ioc-types'
-import { getFilesFromRequest } from "../utils/upload";
+import { getFilesFromRequest } from '../utils/upload'
 
 @injectable()
 class FilesController {
