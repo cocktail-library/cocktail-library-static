@@ -8,9 +8,9 @@ RUN yarn build
 
 FROM node:slim
 
+WORKDIR /app
 ENV NODE_ENV production
 USER node
-WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 
 RUN yarn install --production

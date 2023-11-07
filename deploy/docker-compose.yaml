@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.6'
 
 services:
   server:
@@ -10,20 +10,5 @@ services:
     ports:
       - "${COCKTAILS_STATIC__SERVER_PORT}:4030"
     volumes:
-      - cocktail-library-static-storage:/app/cocktail-library-static-storage/
-      - cocktail-library-static-sqlite:/app/cocktail-static-db.sqlite
-
-volumes:
-  cocktail-library-static-storage:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${COCKTAILS_STATIC__MACHINE_STORAGE_PATH}/
-  cocktail-library-static-sqlite:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${COCKTAILS_STATIC__MACHINE_SQLITE_PATH}/
-  
+      - "${COCKTAILS_STATIC__MACHINE_STORAGE_PATH}:/app/cocktail-library-static-storage/"
+      - "${COCKTAILS_STATIC__MACHINE_SQLITE_PATH}:/app/cocktail-static-db.sqlite"
