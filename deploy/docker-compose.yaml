@@ -10,5 +10,5 @@ services:
     ports:
       - "${COCKTAILS_STATIC__SERVER_PORT}:4030"
     volumes:
-      - ${COCKTAILS_STATIC__MACHINE_STORAGE_PATH}:/app/cocktail-library-static-storage
+      - ${COCKTAILS_STATIC__MACHINE_STORAGE_PATH}/:/app/cocktail-library-static-storage/
       - ${COCKTAILS_STATIC__MACHINE_SQLITE_PATH}:/app/cocktail-static-db.sqlite
