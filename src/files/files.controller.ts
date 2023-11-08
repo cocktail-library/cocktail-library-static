@@ -36,8 +36,8 @@ class FilesController {
 
   async create(req: Request) {
     const files = getFilesFromRequest(req)
-    return await Promise.allSettled(files.map((file) => {
-      this.filesService.createFile(file)
+    return await Promise.all(files.map((file) => {
+      return this.filesService.createFile(file)
     }))
   }
 

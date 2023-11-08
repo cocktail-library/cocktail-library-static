@@ -24,7 +24,7 @@ class FilesRepository {
   }
 
   async getMetadata(fileId: string) {
-    return await this.baseRepository.get(fileId)
+    return this.baseRepository.get(fileId)
   }
 
   async create(file: UploadedFile) {
@@ -45,7 +45,7 @@ class FilesRepository {
         status: FileStatus.ERROR
       })
     }
-    return await this.getMetadata(fileMetadata.fileId)
+    return this.getMetadata(fileMetadata.fileId)
   }
 
   async delete(fileId: string) {

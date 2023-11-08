@@ -2,8 +2,8 @@ import { logger } from './logger'
 import { ApiError } from './api-error'
 import { Request, Response } from 'express'
 
-// eslint-disable-next-line no-unused-vars
-type Controller = (req: Request, res?: Response) => object | string | undefined
+type BasicType = object | string | undefined;
+type Controller = (req: Request, res?: Response) => BasicType | Promise<BasicType>;
 
 function wrap(...controllers: Controller[]) {
   return async (req: Request, res: Response) => {
